@@ -1,7 +1,7 @@
 # Fuglavöktun — aðgangur að gögnum
 
 Leiðbeiningar fyrir þau sem vilja sækja **fuglavöktunargögn** úr gagnagrunni Náttúrufræðistofnunar.
-Leiðbeiningarnar eru ætlaðar öllum sem þegar hafa VPN-tengingu og viðeigandi aðgangsheimildir
+Leiðbeiningarnar eru ætlaðar öllum sem þegar hafa SSL-tengingu og viðeigandi aðgangsheimildir
 (sjá Grunnleiðbeiningar). Gögnin eru í fuglaskemanu `birds`; tilbúnu sýnirnar (views) sem hér er lýst eru í
 vöktunarskemanu `monitoring`.
 
@@ -44,7 +44,7 @@ library(RPostgres)
 con <- dbConnect(
   RPostgres::Postgres(),
   dbname   = "nitest",
-  host     = "postgresql.natt.local",
+  host     = "innra.natt.is",
   port     = 5432,
   user     = "notendanafn",        # sama innskráning og í Vöktunarforritinu
   password = "lykilord"

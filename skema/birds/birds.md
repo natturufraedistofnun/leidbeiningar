@@ -1,7 +1,7 @@
 # Bird monitoring — data access
 
 Directions for those who want to pull **bird monitoring data** out of Náttúrufræðistofnun's database. They
-are intended for anyone who already has a VPN connection and the appropriate access rights (see
+are intended for anyone who already has an SSL connection and the appropriate access rights (see
 Grunnleiðbeiningar). The data is in the bird schema `birds`; the ready-made views described here are in the
 monitoring schema `monitoring`.
 
@@ -45,7 +45,7 @@ library(RPostgres)
 con <- dbConnect(
   RPostgres::Postgres(),
   dbname   = "nitest",
-  host     = "postgresql.natt.local",
+  host     = "innra.natt.is",
   port     = 5432,
   user     = "username",           # same login as the Monitoring app
   password = "password"

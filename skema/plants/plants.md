@@ -1,7 +1,7 @@
 # Vegetation plots — data access
 
 Directions for those who want to pull **vegetation plot data** — species cover in surveyed plots and their
-subplots — out of Náttúrufræðistofnun's database. They are intended for anyone who already has a VPN
+subplots — out of Náttúrufræðistofnun's database. They are intended for anyone who already has an SSL
 connection and the appropriate access rights (see Grunnleiðbeiningar). The data is in the plant schema
 `plants`.
 
@@ -58,7 +58,7 @@ library(RPostgres)
 con <- dbConnect(
   RPostgres::Postgres(),
   dbname   = "nitest",
-  host     = "postgresql.natt.local",
+  host     = "innra.natt.is",
   port     = 5432,
   user     = "username",
   password = "password"
